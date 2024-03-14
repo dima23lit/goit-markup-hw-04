@@ -138,6 +138,19 @@ img {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.header-menu-nav-active::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .header-menu-nav:hover,
@@ -168,6 +181,7 @@ img {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-link:hover,
@@ -205,6 +219,7 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -222,6 +237,21 @@ img {
 
 .main-advantages-item {
   width: calc((100% - 24px * 3) / 4);
+}
+
+.main-container-icon {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  max-width: 264px;
+  background: #f4f4fd;
+  padding: 24px 0 24px 0;
+  margin-bottom: 8px;
+}
+
+.main-advantages-icon {
+  fill: #2e2f42;
+  margin: 0 auto;
+  display: block;
 }
 
 .main-title-advantages {
@@ -281,6 +311,8 @@ img {
 .main-team-container {
   padding-top: 32px;
   padding-bottom: 32px;
+  max-width: 232px;
+  margin: 0 auto;
 }
 
 .main-team-user {
@@ -299,6 +331,35 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  margin-bottom: 8px;
+}
+
+.main-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.main-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.main-social-link {
+  width: 100%;
+  height: 100%;
+  padding: 8px 0;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-social-link:hover {
+  background-color: #404bbf;
 }
 
 /* main-section-fourth */
@@ -330,6 +391,10 @@ img {
   width: calc((100% - 2 * 24px) / 3);
 }
 
+.main-portfolio-item:hover .main-portfolio-text {
+  transform: translateY(0);
+}
+
 .main-portfolio-container {
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
@@ -354,6 +419,26 @@ img {
   color: #434455;
 }
 
+.main-container-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-portfolio-text {
+  position: absolute;
+  top: 0;
+  background-color: #4d5ae5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  height: 100%;
+  padding: 40px 32px 132px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* footer */
 
 .footer {
@@ -361,8 +446,18 @@ img {
   padding: 100px 0 100px;
 }
 
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-piece-logo {
   color: #f4f4fd;
+}
+
+.footer-aboutus {
+  margin-right: 120px;
+  max-width: 264px;
 }
 
 .footer-logo {
@@ -383,5 +478,17 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px;
+}
+
+.footer-social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.main-social-link-footer:hover {
+  background-color: #31d0aa;
 }
